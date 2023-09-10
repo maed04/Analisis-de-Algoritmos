@@ -1,0 +1,56 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Analisis De Algoritmos</title>
+</head>
+<body>
+    <header>
+        <span style="color:green"> <h1>CODIGO</h1> </span>
+    </header>
+
+    <main>
+        <h2>Búsqueda Binaria</h2>
+        <pre>
+        def busqueda_binaria(lista, x):
+          """Búsqueda binaria.
+
+          Precondición: lista está ordenada.
+          Devuelve -1 si x no está en lista;
+          Devuelve p tal que lista[p] == x, si x está en lista.
+          """
+
+          izquierda = 0
+          derecha = len(lista) - 1
+
+          while izquierda <= derecha:
+            medio = (izquierda + derecha) // 2
+
+            if lista[medio] == x:
+              return medio  # Elemento encontrado, devuelve su índice
+            elif lista[medio] < x:
+              izquierda = medio + 1  # Descarta la mitad izquierda
+            else:
+              derecha = medio - 1  # Descarta la mitad derecha
+
+          return -1  # Elemento no encontrado
+
+        # Ejemplo de uso:
+        mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        elemento_buscado = 5
+        resultado = busqueda_binaria(mi_lista, elemento_buscado)
+
+        if resultado != -1:
+          print(f"El elemento {elemento_buscado} se encuentra en el índice {resultado}.")
+        else:
+          print(f"El elemento {elemento_buscado} no se encuentra en la lista.")
+          </pre>
+
+          <!--<h2>Foto</h2>
+          <img src="img/EEEEHHHEHEHEHWADSWA.jpg" alt="Mi Imagen" width="900" height="600">-->
+    </main>
+
+    <footer>
+        <p>&copy; 2023. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
