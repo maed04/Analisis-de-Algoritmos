@@ -1,0 +1,48 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Analisis De Algoritmos</title>
+</head>
+<body>
+    <header>
+        <span style="color:green"> <h1>CODIGO</h1> </span>
+    </header>
+
+    <main>
+        <h2>Factorial Iterativo</h2>
+        <pre>
+        def factorial_iterativo(n):
+          fact = 1
+          for i in range(1, n + 1):
+            fact = fact * i
+          return fact
+
+
+        if __name__ == '__main__':
+
+          n = int(input("Dame un numero: "))
+          print(f'The Factorial of {n} is {factorial_iterativo(n)}')
+        </pre>
+
+        <h2>Factorial Recursivo</h2>
+        <pre>
+        def factorial_recursivo(n):
+          if n == 0:
+            return 1
+          else:
+            return n * factorial_recursivo(n - 1)
+
+        if __name__ == '__main__':
+          n = int(input("Ingresa un número para calcular su factorial: "))
+          print(f'The Factorial of {n} is {factorial_recursivo(n)}')
+        </pre>
+
+          <!--<h2>Foto</h2>
+          <img src="img/EEEEHHHEHEHEHWADSWA.jpg" alt="Mi Imagen" width="900" height="600">-->
+    </main>
+
+    <footer>
+        <p>&copy; 2023. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
