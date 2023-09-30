@@ -3,8 +3,11 @@
 <head>
     <title>Analisis De Algoritmos</title>
 </head>
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+
+<!-- https://pyscript.net -->
+
 <body>
     <header>
         <span style="color:green"> <h1>CODIGO</h1> </span>
@@ -12,20 +15,22 @@
 
     <main>
         <h2>Factorial</h2>
-        <py-script>
-def factorial(n):
-  if n == 0:
-  return 1
-else:
-  result = 1
-  for i in range(1, n + 1):
-    result *= i
-return result
+        <!-- <py-script>-->
+        <pre>
+        def factorial(n):
+          if n == 0:
+          return 1
+        else:
+          result = 1
+          for i in range(1, n + 1):
+            result *= i
+        return result
 
-numero = int(input("Ingrese un número para calcular su factorial: "))
-resultado = factorial(numero)
-print(f"El factorial de {numero} es {resultado}")
-        </py-script>|
+        numero = int(input("Ingrese un número para calcular su factorial: "))
+        resultado = factorial(numero)
+        print(f"El factorial de {numero} es {resultado}")
+        </pre>
+        <!-- </py-script> -->
 
           <!--<h2>Foto</h2>
           <img src="img/EEEEHHHEHEHEHWADSWA.jpg" alt="Mi Imagen" width="900" height="600">-->
