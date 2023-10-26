@@ -1,0 +1,120 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Analisis De Algoritmos</title>
+</head>
+<!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+
+<!-- https://pyscript.net -->
+
+<body>
+    <header>
+        <span style="color:green"> <h1>CODIGO</h1> </span>
+    </header>
+
+    <main>
+        <h2>Codigo acomodado</h2>
+        <!-- <py-script>-->
+        <pre>
+        n = 8
+        tasks = [[0, 6, 3], [1, 4, 5], [3, 5, 1], [3, 8, 8], [4, 7, 4], [5, 9, 4], [6, 10, 2], [4, 11, 3]]
+        tasks
+
+
+        from operator import itemgetter
+        tasks = sorted(tasks, key=itemgetter(1))
+        for i, t in enumerate(tasks):
+            print(f'Trabajo {i+1} => finaliza en {t[1]}')
+        tasks
+
+
+        def binary_search(A, index, start, end):
+            mid = int((start + end) / 2)
+            if index == A[mid]:
+                return mid
+            elif start == end + 1:
+                if A[mid] < index:
+                    return mid
+                else:
+                    return -1
+            elif index < A[mid]:
+                return binary_search(A, index, 0, mid - 1)
+            else:
+                return binary_search(A, index, mid + 1, end)
+
+
+        f1 = [4, 5, 6, 7, 8, 9, 10, 11]
+        f = [4, 10]
+        binary_search(f, 6, 0, 1)
+
+
+        t_f = []
+        weights = list()
+        for i in tasks:
+            t_f.append(i[1])
+            weights.append(i[2])
+        print(t_f)
+        weights
+
+
+        w = []
+        print(tasks)
+        for index, trabajo in enumerate(tasks):
+            print(f'Trabajo {index + 1}, inicia {trabajo[0]}, lista de tiempos finales {t_f}')
+            w.append(binary_search(t_f, trabajo[0], 0, 7))
+
+
+        p=[]
+        p.insert(0, 0)
+        weights.insert(0, 0)
+        def computeOpt(j, p, w):
+            if j == 0:
+                return 0
+            else:
+                return max(computeOpt(j - 1, p, w), w[j] + computeOpt(p[j], p, w))
+
+
+        M = []
+        for i in range(9):
+            M.append(-1)
+        M
+
+
+        def McomputeOpt(j, p, w):
+            if j > 0:
+                if M[j] == -1:
+                    M[j] = max(McomputeOpt(j - 1, p, w), w[j] + McomputeOpt(p[j], p, w))
+                return M[j]
+            else:
+                return 0
+
+
+        weights[8]
+
+
+        #print(McomputeOpt(8, p, weights))
+
+
+        #print(computeOpt(8, p, weights))
+
+
+        t_f = []
+        weights = list()
+        for i in tasks:
+            t_f.append(i[1])
+            weights.append(i[2])
+        print(t_f)
+        weights
+        </pre>
+        <!-- </py-script> -->
+
+          <h2>Foto</h2>
+          <img src="img/Captura de pantalla (536).jpg" alt="Mi Imagen" width="900" height="600">
+    </main>
+
+    <footer>
+        <p>&copy; 2023. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
